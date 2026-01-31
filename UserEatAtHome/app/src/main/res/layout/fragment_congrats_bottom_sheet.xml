@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".CongratsBottomSheet">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="350dp"
+        android:fontFamily="@font/chewy"
+        android:gravity="center"
+        android:text="Congrats!\n  Your Order placed"
+        android:textColor="#19536E"
+        android:textSize="36sp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="65dp"
+        android:src="@drawable/check" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/goHome"
+        android:textAllCaps="false"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/arrow_left" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</FrameLayout>

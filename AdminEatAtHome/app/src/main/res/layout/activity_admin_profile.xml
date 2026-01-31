@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AdminProfileActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/backbtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/arrow_left"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/chewy"
+                android:text="Admin Profile"
+                android:textColor="@color/black"
+                android:textSize="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/chewy"
+                android:text="Edit Your Profile"
+                android:textColor="#19536E"
+                app:layout_constraintStart_toStartOf="@+id/backbtn"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <TextView
+                android:id="@+id/editButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edittextshape"
+                android:clickable="true"
+                android:drawableLeft="@drawable/edit"
+                android:fontFamily="@font/chewy"
+                android:gravity="center"
+                android:text="Edit Your Profile"
+                android:textColor="#19536E"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="331dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edittext_border"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editButton">
+
+                <AutoCompleteTextView
+                    android:id="@+id/listOfLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:drawableStart="@drawable/location"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/chewy"
+                    android:inputType="none"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="Choose your location"
+                    android:textSize="18dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <EditText
+                android:id="@+id/restaurantName"
+                android:layout_width="331dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edittext_border"
+                android:drawableLeft="@drawable/profileadmin"
+                android:drawablePadding="10dp"
+                android:elevation="5dp"
+                android:fontFamily="@font/chewy"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:padding="15dp"
+                android:text="Nicky Pizza"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+            <EditText
+                android:id="@+id/edtAddress"
+                android:layout_width="331dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edittext_border"
+                android:drawableLeft="@drawable/home"
+                android:drawablePadding="10dp"
+                android:elevation="5dp"
+                android:fontFamily="@font/chewy"
+                android:gravity="center_vertical"
+                android:inputType="textMultiLine"
+                android:padding="15dp"
+                android:text="123 Moo 16 Thanon Mittraphap, Nai Mueang, Mueang Khon Kaen District, Khon Kaen 40002"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/restaurantName" />
+
+            <EditText
+                android:id="@+id/edtPhone"
+                android:layout_width="331dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edittext_border"
+                android:drawableLeft="@drawable/phone"
+                android:drawablePadding="10dp"
+                android:elevation="5dp"
+                android:fontFamily="@font/chewy"
+                android:gravity="center_vertical"
+                android:inputType="phone"
+                android:padding="15dp"
+                android:text="012-345-6789"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtAddress" />
+
+            <EditText
+                android:id="@+id/emailOrPhone"
+                android:layout_width="331dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edittext_border"
+                android:drawableLeft="@drawable/email"
+                android:drawablePadding="10dp"
+                android:elevation="5dp"
+                android:fontFamily="@font/chewy"
+                android:gravity="center_vertical"
+                android:inputType="textEmailAddress"
+                android:padding="15dp"
+                android:text="Nicky@gmail.com"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtPhone" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="331dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edittext_border"
+                android:drawableLeft="@drawable/password"
+                android:drawablePadding="10dp"
+                android:elevation="5dp"
+                android:fontFamily="@font/chewy"
+                android:gravity="center_vertical"
+                android:inputType="textPassword"
+                android:padding="15dp"
+                android:text="abcde12345"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emailOrPhone" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/chewy"
+                android:text="Restaurant Image"
+                android:textColor="#19536E"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/password" />
+
+            <TextView
+                android:id="@+id/selectImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edittextshape"
+                android:drawableLeft="@drawable/imageadmin"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/chewy"
+                android:gravity="center"
+                android:text="Select image"
+                android:textColor="#19536E"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/password" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/selectImage"
+                app:layout_constraintStart_toStartOf="@+id/textView12"
+                app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+                <ImageView
+                    android:id="@+id/selectedImage"
+                    android:layout_width="300dp"
+                    android:layout_height="180dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/nickyimage" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/SaveButton"
+                android:layout_width="323dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/btnshape"
+                android:fontFamily="@font/chewy"
+                android:text="Save Change"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView6" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

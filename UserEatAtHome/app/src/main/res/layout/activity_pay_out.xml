@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".PayOutActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ส่วนปุ่ม back และข้อความ -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="18dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button8"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/arrow_left"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Add shipping address"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:fontFamily="@font/chewy" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edittextshape"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                app:srcCompat="@drawable/username" />
+
+            <EditText
+                android:id="@+id/nameP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edittextshape"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                app:srcCompat="@drawable/home" />
+
+            <EditText
+                android:id="@+id/addressP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:hint="Address"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edittextshape"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                app:srcCompat="@drawable/phone" />
+
+            <EditText
+                android:id="@+id/phoneP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:hint="Phone"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edittextshape"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                app:srcCompat="@drawable/payment" />
+
+            <TextView
+                android:layout_width="179dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="Pay with rider"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="120dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ridersssssss" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edittextshape"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button8">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/tm" />
+
+            <TextView
+                android:id="@+id/totalCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:hint="100 THB"
+                android:inputType="none" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/PlaceMyorder"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="210dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/pay"
+        android:fontFamily="@font/chewy"
+        android:text="Place My Order"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+</FrameLayout>
